@@ -59,3 +59,114 @@ branch 'main' set up to track 'origin/main'.
 
 Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (main)
 $
+=========================================
+Sửa file trên máy tính
+Để lấy project từ GitHub xuống máy tính và sửa, bạn dùng lệnh git clone (nếu máy chưa có project) hoặc git pull (nếu máy đã có project rồi).
+
+Trường hợp 1: Máy chưa có project (lấy lần đầu)
+
+Ví dụ repo của bạn:
+
+https://github.com/TinhNguyen1902/Test.git
+
+Mở Git Bash tại nơi muốn lưu project, ví dụ Desktop:
+
+cd ~/Desktop
+
+Clone repo:
+
+git clone https://github.com/TinhNguyen1902/Test.git
+
+Git sẽ tạo một thư mục:
+
+Desktop
+ └── Test
+      ├── Note.txt
+      └── Test.txt
+
+Đi vào project:
+
+cd Test
+
+Kiểm tra:
+
+git status
+
+Kết quả:
+
+On branch main
+nothing to commit, working tree clean
+
+Bây giờ bạn có thể mở bằng VS Code:
+
+code .
+
+hoặc mở thư mục đó bằng File Explorer.
+
+Trường hợp 2: Bạn đã clone rồi, chỉ muốn cập nhật mới nhất
+
+Ví dụ bạn đã có thư mục Test trên máy:
+
+cd ~/Desktop/Test
+
+Lấy thay đổi từ GitHub:
+
+git pull
+
+Ví dụ:
+
+Trên GitHub:
+
+Note.txt
+Hello GitHub
+
+Máy:
+
+Note.txt
+Hello Git
+
+Sau:
+
+git pull
+
+Máy sẽ thành:
+
+Note.txt
+Hello GitHub
+Sau khi sửa file trên máy
+
+Ví dụ bạn sửa Note.txt:
+
+Kiểm tra thay đổi:
+
+git status
+
+Bạn sẽ thấy:
+
+modified: Note.txt
+
+Lưu thay đổi lên GitHub:
+
+git add .
+git commit -m "Update Note"
+git push
+
+Quy trình đầy đủ sẽ là:
+
+GitHub
+  ↓ git clone
+Máy tính
+  ↓ sửa file
+git add
+  ↓
+git commit
+  ↓
+git push
+GitHub cập nhật
+
+Với repo Test lúc nãy của bạn, bạn có thể thử ngay:
+
+cd ~/Desktop
+git clone https://github.com/TinhNguyen1902/Test.git
+
+Sau đó mở thư mục Test và sửa thử Note.txt.
