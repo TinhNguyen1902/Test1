@@ -1,0 +1,61 @@
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/AB (main)
+$ cd ~/Desktop/Test1
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1
+$ ls
+File_Test1.txt
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1
+$ git init
+Initialized empty Git repository in C:/Users/Chang/Desktop/Test1/.git/
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git add .
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File_Test1.txt
+
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git commint -m "Test Upload 2nd"
+git: 'commint' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git commit -m "Test Upload 2nd"
+[master (root-commit) ee90d9f] Test Upload 2nd
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 File_Test1.txt
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git remote add origin https://github.com/TinhNguyen1902/Test1.git
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git remote -v
+origin  https://github.com/TinhNguyen1902/Test1.git (fetch)
+origin  https://github.com/TinhNguyen1902/Test1.git (push)
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (master)
+$ git branch -M main
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/TinhNguyen1902/Test1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Chang@DESKTOP-8QO2J0H MINGW64 ~/Desktop/Test1 (main)
+$
